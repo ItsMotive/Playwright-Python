@@ -167,7 +167,111 @@ page.locator(":nth-match(button.btn-primary, 5)")
 page.locator(":nth-match(button:text('Primary'), 1)")
 
 
-# ----------------------------------------------------------------------- #
+
+# -------------------------------- XPath -------------------------------- #
+
+
+page.locator("//h1[contains(text(),'Head')]")
+page.locator("//button[contains(@class, 'btn-outline-primary')]")
+page.locator("//input[contains(@value, 'correct value')]")
+
+
+
+# -------------------------------- Other -------------------------------- #
+
+
+# nth locator
+page.get_by_role("button", name="Primary").locator("nth=2")
+
+# By Keyword
+page.locator("id=btnGroupDrop1").highlight()
+
+# By Visibility
+page.locator("div.dropdown-menu").locator("visible=true").highlight()
+
+# Getting Parent
+page.get_by_label("Email address").locator("..").highlight()
+
+# Filter
+page.get_by_role("heading").filter(has_text="Heading").highlight()
+
+# By Element inside of element
+page.locator("div.form-label").filter(has=page.get_by_label("Password")).highlight()
+
+
+# -------------------------------- Mouse Actions -------------------------------- #
+
+
+button = page.locator("div.bs-component button[data-bs-toggle='popover']").filter(has=page.get_by_text("Left"))
+button.click()
+button.dblclick(delay=500)
+button.click(button="right")
+button.click(modifiers=["Shift", "Alt", "Control", "Meta"])
+button.hover()
+
+
+# -------------------------------- Input Field Actions -------------------------------- #
+
+
+email_input = page.locator("input#exampleInputEmail1").highlight()
+
+# Simulates CTRL + C and CTRL + V
+email_input.fill("test@email.com")
+
+# Simulates actually typing
+email_input.type("test@email.com", delay=200)
+
+# Gets current value inside input box (NOT placeholder value)
+email_input.input_value()
+email_input.clear()
+
+
+# -------------------------------- Checkbox and Radio Inputs -------------------------------- #
+
+
+radio1 = page.locator("input.form-check-input[value='option1']")
+radio1.check()
+
+checkbox1 = page.get_by_label("Default checkbox")
+checkbox1.check()
+checkbox1.uncheck()
+checkbox1.is_checked()
+checkbox1.set_checked(True)
+checkbox1.click()
+
+
+# -------------------------------- Option/Select Menu -------------------------------- #
+
+
+select = page.get_by_label("Example select")
+select.select_option("3")
+
+multiple_select = page.get_by_label("Example multiple select").highlight()
+multiple_select.select_option(["2", "4"])
+
+
+# -------------------------------- Option/Select Menu -------------------------------- #
+
+
+dropdown = page.locator("button#btnGroupDrop1")
+dropdown.click()
+
+dropdown2 = page.locator("div.dropdown-menu:visible a:text('Dropdown link')").last
+dropdown2.click()
+
+
+# -------------------------------- Uploading File -------------------------------- #
+
+
+file_input = page.get_by_label("Default file input example")
+
+with page.expect_file_chooser() as fc_info:
+    file_input.click()
+
+file_chooser = fc_info.value
+file_chooser.set_files("app.py")
+
+# ----------------------------------- Get Alt Text ----------------------------------- #
 
 
 # Website: https://unsplash.com/
