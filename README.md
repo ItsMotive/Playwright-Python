@@ -4,7 +4,27 @@
 - A small project to help recall setting up Playwright using Python with some examples.
 
 ## Table Of Contents
+- [Asynchronous vs Synchronous](#async-vs-sync)
 - [Initial Install](#initial-install)
+- [Setting up Basic Synchronous Project](#Setting-up-Basic-Synchronous-Project)
+- [REPL](#Using-REPL)
+- [Locators](#locators)
+
+## Async vs Sync
+Choosing Between Sync and Async
+- Use Sync if:
+   - You prefer a simpler, more linear code flow.
+   - Your tests do not require concurrent operations and the performance impact is minimal.
+     
+- Use Async if:
+   - You need to perform operations concurrently to speed up test execution.
+   - You are comfortable with handling Promise chains and async/await patterns.
+     
+- Comparison Table:
+  | Aspect | Synchronous | Asynchronous |
+  | ---- | ---- | ---- |
+  
+
 
 ## Initial Install
 1. (Optional) Create Virtual Environment
