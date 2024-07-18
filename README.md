@@ -97,7 +97,9 @@ Choosing Between Sync and Async
         ```
 
 ## Locators
-- page.get_by_role() : Locates by explicity or implicit accessibility attributes.
+- ```
+  page.get_by_role() # Locates by explicity or implicit accessibility attributes.
+  ```
 - page.get_by_text() : Locates by text content
 - page.get_by_label() : Locates a form control by label's text
 - page.get_by_placeholder() : Locates input by placeholder
