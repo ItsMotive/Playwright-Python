@@ -6,7 +6,7 @@
 # Table Of Contents
 - [Initial Install](#initial-install)
 
-### Initial Install
+## Initial Install
 1. (Optional) Create Virtual Environment
    - Using Visual Studio Code, you can run this command in the terminal:
    ```
