@@ -108,7 +108,9 @@ Choosing Between Sync and Async
      ```
 
 ## Using Inspector
-- Inspector is an interactive tester that allows you to highlight over certain elements and shows you the exact way to locate
+- Inspector is an interactive tester that allows you to highlight over certain elements and shows you the exact way to locate.
+- It will also record each action you do. 
+- Great way to do Exploratory testing.
 - Starting Inspector:
   ```
   playwright codegen website.com
