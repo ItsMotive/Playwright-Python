@@ -52,7 +52,7 @@
      1. Open Terminal and Navigate to Project Directory
      2. Activate the Virtual Environment
      3. Run command to start python
-        ```
+        ``` terminal
         python
         ```
         or
