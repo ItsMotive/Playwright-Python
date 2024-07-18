@@ -69,12 +69,16 @@ Choosing Between Sync and Async
 - Main Code:
   ``` python
   with sync_playwright() as playwright:
+  
     # Launch Browser
     browser = playwright.chromium.launch(headless=False)
+  
     # Create a new page/tab
     page = browser.new_page()
+  
     # Visit playwright website
     page.goto("https://playwright.dev/python/")
+  
     # Close browser
     browser.close()
   ```
