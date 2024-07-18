@@ -221,8 +221,14 @@ Choosing Between Sync and Async
   ```
 
 ## Option and Select Menu
-- .select_option() # Selects a specific option based on index position
-   - .select_option(["2","4"]) # Allows you select multiple options
+- ``` python
+  # Selects a specific option based on index position
+  .select_option() 
+  ```
+   - ``` python
+     # Allows you select multiple options
+     .select_option(["2","4"]) 
+     ```
  
 ## Uploading File 
 - ``` python
