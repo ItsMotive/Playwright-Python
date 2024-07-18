@@ -8,6 +8,7 @@
 - [Initial Install](#initial-install)
 - [Setting up Basic Synchronous Project](#Setting-up-Basic-Synchronous-Project)
 - [REPL](#Using-REPL)
+- [Using Inspector](#Using-Inspector)
 - [Tracing](#tracing)
 - [Locators](#locators)
 - [Mouse Actions](#Mouse-Actions)
@@ -104,7 +105,14 @@ Choosing Between Sync and Async
      browser = playwright.chromium.launch(headless=False, slow_mo=700)
      page = browser.new_page()
      page.goto("https://playwright.dev/python/")
-        ```
+     ```
+
+## Using Inspector
+- Inspector is an interactive tester that allows you to highlight over certain elements and shows you the exact way to locate
+- Starting Inspector:
+  ```
+  playwright codegen website.com
+  ```
 
 ## Tracing
 - Tracing allows you to capture and analyze execution of your test.
