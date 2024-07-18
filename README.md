@@ -108,10 +108,10 @@ Choosing Between Sync and Async
 
 ## Tracing
 - Tracing allows you to capture and analyze execution of your test.
-   1. Captures Execution Details: Records detailed information about actions taken
-   2. Visualizes Test Runs: Creates a timeline of test execution. Includes screenshots, DOM snapshots, network requests, and console logs.
-   3. Identifies Issues: Where and why tests might be failing
-   4. Performance Analysis: Provides insights on how long different actions take
+   - Captures Execution Details: Records detailed information about actions taken
+   - Visualizes Test Runs: Creates a timeline of test execution. Includes screenshots, DOM snapshots, network requests, and console logs.
+   - Identifies Issues: Where and why tests might be failing
+   - Performance Analysis: Provides insights on how long different actions take
 - Example:
   ``` python
   # Launch Browser
