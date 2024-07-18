@@ -16,3 +16,14 @@
    ```
    .\venv\Scripts\activate
    ```
+   
+2. Install Playwright
+   ```
+   pip install playwright
+   ```
+   
+3. Install Playwright Drivers
+   ```
+   playwright install
+   ```
+
