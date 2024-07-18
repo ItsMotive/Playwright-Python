@@ -177,22 +177,52 @@ Choosing Between Sync and Async
   ```
 
 ## Input Field Actions
-- .fill() : Enters input as if CTRL + C and CTRL + V
-- .type() : Enters input as if actually typing
-   - .type("Something", delay=200) : Can also add a delay to adjust speed of typing
-- .input_value() : Gets current value of input box (NOT placeholder value)
-- .clear() : Clears current input value
+- ``` python
+  # Enters input as if CTRL + C and CTRL + V
+  .fill() 
+  ```
+- ``` python
+  # Enters input as if actually typing
+  .type() 
+  ```
+   - ``` python
+     # Can also add a delay to adjust speed of typing
+     .type("Something", delay=200) 
+     ```
+- ``` python
+  # Gets current value of input box (NOT placeholder value)
+  .input_value() 
+  ```
+- ``` python
+   # Clears current input value
+   .clear() 
+  ```
 
 ## Checkbox and Radio Inputs
-- .check() : Sets checkbox or radio input to true or selected
-- .uncheck() : Sets checkbox or radio input to false or unselected
-- .set_checked() : Sets to true or false
-- .click() : Clicks on checkbox or radio input
-- .is_checked() : Checks the current status of checkbox or radio button
+- ``` python
+  # Sets checkbox or radio input to true or selected
+  .check() 
+  ```
+- ``` python
+  # Sets checkbox or radio input to false or unselected
+  .uncheck() 
+  ```
+- ``` python
+  # Sets to true or false
+  .set_checked() 
+  ```
+- ``` python
+  # Clicks on checkbox or radio input
+  .click() 
+  ```
+- ``` python
+  # Checks the current status of checkbox or radio button
+  .is_checked() 
+  ```
 
 ## Option and Select Menu
-- .select_option() : Selects a specific option based on index position
-   - .select_option(["2","4"]) : Allows you select multiple options
+- .select_option() # Selects a specific option based on index position
+   - .select_option(["2","4"]) # Allows you select multiple options
  
 ## Uploading File 
 - ``` python
