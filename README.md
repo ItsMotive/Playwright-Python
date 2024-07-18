@@ -23,8 +23,16 @@ Choosing Between Sync and Async
 - Comparison Table:
   | Aspect | Synchronous | Asynchronous |
   | ---- | ---- | ---- |
-  
-
+  | Execution Flow | Blocking, Step by Step | Non-Blocking, Concurrent Operations |
+  | Code Complexity | Simpler, more linear | More Complex, Requires async/await |
+  | Error Handling | Standard Try-Catch Blocks | Requires handling Promises and Async error |
+  | Performance | Generally slower, as each step waits for the previous one to complete | Potentially faster due to parallel execution |
+  | Use Case | Preferred for simpler scripts and linear tasks | Ideal for complex tasks that benefit from concurrency |
+  | Readability | Easier to read and write | Requires understanding of asynchronous programming |
+  | Learning Curve | Lower, suitable for beginners | Higher, requires familiarity with async patterns |
+  | Examples | from playwright.sync_api import sync_playwright | from playwright.async_api import async_playwright |
+  | Function Example | def run_sync() | async def run_async() |
+  | Execution Example | run_sync() | asyncio.run(run_async()) |
 
 ## Initial Install
 1. (Optional) Create Virtual Environment
