@@ -97,4 +97,54 @@ Choosing Between Sync and Async
         ```
 
 ## Locators
-- 
+- page.get_by_role() : Locates by explicity or implicit accessibility attributes.
+- page.get_by_text() : Locates by text content
+- page.get_by_label() : Locates a form control by label's text
+- page.get_by_placeholder() : Locates input by placeholder
+- page.get_by_alt_text() : Locates image by alternative text
+- page.get_by_title() : Locates by title attribute
+- page.get_by_test_id() : Locates by data-testis attribute
+- page.locator() : Locates using CSS Selector or XPath
+   - .locator("nth=#) : Locates by position of list of webelements
+   - .locator("id=something") : Locates by keyword
+   - .locator("visible=true") : Locates by visible element
+   - .locator("..") : Locates Parent path
+   - .filter(has_text="Something") : Filters for specific element
+   - .filter(has=page.get_by_label("Something")) : Filters by an element inside of an element
+ 
+## Mouse Actions
+- .click() : Default left click
+   - .click(button="right") : Right click
+   - .click(modifiers=["Shift", "Alt", "Control", "Meta"]) : Allows for different inputs with clicking
+- .dblclick() : Double left click
+- .hover() : Moves mouse cursor over an element
+
+## Input Field Actions
+- .fill() : Enters input as if CTRL + C and CTRL + V
+- .type() : Enters input as if actually typing
+   - .type("Something", delay=200) : Can also add a delay to adjust speed of typing
+- .input_value() : Gets current value of input box (NOT placeholder value)
+- .clear() : Clears current input value
+
+## Checkbox and Radio Inputs
+- .check() : Sets checkbox or radio input to true or selected
+- .uncheck() : Sets checkbox or radio input to false or unselected
+- .set_checked() : Sets to true or false
+- .click() : Clicks on checkbox or radio input
+- .is_checked() : Checks the current status of checkbox or radio button
+
+## Option and Select Menu
+- .select_option() : Selects a specific option based on index position
+   - .select_option(["2","4"]) : Allows you select multiple options
+ 
+## Uploading File 
+- ``` python
+  file_input = page.get_by_label("Default file input example")
+
+   with page.expect_file_chooser() as fc_info:
+       file_input.click()
+   
+   file_chooser = fc_info.value
+   file_chooser.set_files("app.py")
+  ```
+  
