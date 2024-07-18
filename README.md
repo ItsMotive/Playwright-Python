@@ -27,3 +27,8 @@
    playwright install
    ```
 
+## Setting up Basic Project
+- Libraries to Import
+  ``` python
+  from playwright.sync_api import sync_playwright
+  ```
