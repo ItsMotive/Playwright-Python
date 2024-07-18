@@ -1,4 +1,7 @@
-# Website: https://bootswatch.com/default/
+# Website: https://bootswatch.com/default/\
+
+# This is only here to get rid of warning: 'page' is not defined
+page = 0
 
 # <button type="button" class="btn btn-primary">Default button</button>
 page.get_by_role('button', name="Default button")
