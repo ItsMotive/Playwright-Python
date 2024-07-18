@@ -9,6 +9,11 @@
 - [Setting up Basic Synchronous Project](#Setting-up-Basic-Synchronous-Project)
 - [REPL](#Using-REPL)
 - [Locators](#locators)
+- [Mouse Actions](#Mouse-Actions)
+- [Input Field Actions](#Input-Field-Actions)
+- [Checkbox and Radio Inputs](#Checkbox-and-Radio-Inputs)\
+- [Option and Select Menu](#Option-and-Select-Menu)
+- [Uploading File](#Uploading-File)
 
 ## Async vs Sync
 Choosing Between Sync and Async
