@@ -98,21 +98,61 @@ Choosing Between Sync and Async
 
 ## Locators
 - ``` python
-  page.get_by_role() #Locates by explicity or implicit accessibility attributes.
+  # Locates by explicity or implicit accessibility attributes.
+  page.get_by_role() 
   ```
-- page.get_by_text() : Locates by text content
-- page.get_by_label() : Locates a form control by label's text
-- page.get_by_placeholder() : Locates input by placeholder
-- page.get_by_alt_text() : Locates image by alternative text
-- page.get_by_title() : Locates by title attribute
-- page.get_by_test_id() : Locates by data-testis attribute
-- page.locator() : Locates using CSS Selector or XPath
-   - .locator("nth=#) : Locates by position of list of webelements
-   - .locator("id=something") : Locates by keyword
-   - .locator("visible=true") : Locates by visible element
-   - .locator("..") : Locates Parent path
-   - .filter(has_text="Something") : Filters for specific element
-   - .filter(has=page.get_by_label("Something")) : Filters by an element inside of an element
+- ``` python
+  # Locates by text content
+  page.get_by_text() 
+  ```
+- ``` python
+  # Locates a form control by label's text
+  page.get_by_label() 
+  ```
+- ``` python
+  # Locates input by placeholder
+  page.get_by_placeholder() 
+  ```
+- ``` python
+  # Locates image by alternative text
+  page.get_by_alt_text() 
+  ```
+- ``` python
+  # Locates by title attribute
+  page.get_by_title() 
+  ```
+- ``` python
+  # Locates by data-testis attribute
+  page.get_by_test_id() 
+  ```
+- ``` python
+  # Locates using CSS Selector or XPath
+  page.locator() 
+  ```
+   - ``` python
+     # Locates by position of list of webelements
+     .locator("nth=#) 
+     ```
+   - ``` python
+     # Locates by keyword
+     .locator("id=something") 
+     ```
+   - ``` python
+     # Locates by visible element
+     .locator("visible=true") 
+     ```
+   - ``` python
+     # Locates Parent path
+     .locator("..") 
+     ```
+   - ``` python
+     # Filters for specific element
+     .filter(has_text="Something") 
+     ```
+   - ``` python
+     # Filters by an element inside of an element
+     .filter(has=page.get_by_label("Something")) 
+     ```
  
 ## Mouse Actions
 - .click() : Default left click
