@@ -8,6 +8,7 @@
 - [Initial Install](#initial-install)
 - [Setting up Basic Synchronous Project](#Setting-up-Basic-Synchronous-Project)
 - [REPL](#Using-REPL)
+- [Tracing](#tracing)
 - [Locators](#locators)
 - [Mouse Actions](#Mouse-Actions)
 - [Input Field Actions](#Input-Field-Actions)
@@ -104,6 +105,41 @@ Choosing Between Sync and Async
      page = browser.new_page()
      page.goto("https://playwright.dev/python/")
         ```
+
+## Tracing
+- Tracing allows you to capture and analyze execution of your test.
+   1. Captures Execution Details: Records detailed information about actions taken
+   2. Visualizes Test Runs: Creates a timeline of test execution. Includes screenshots, DOM snapshots, network requests, and console logs.
+   3. Identifies Issues: Where and why tests might be failing
+   4. Performance Analysis: Provides insights on how long different actions take
+- Example:
+  ``` python
+  # Launch Browser
+  browser = playwright.chromium.launch(headless=False, slow_mo=700)
+
+  # Playwright Tracing
+  context = browser.new_context()
+  context.tracing.start(screenshots=True, snapshots=True, sources=True)
+
+  # Create a new page/tab
+  page = context.new_page()
+
+  # Visit playwright website
+  page.goto("https://playwright.dev/python/")
+
+  # Locate link element with "Docs" text
+  docs_button = page.get_by_role('link', name="Docs")
+  docs_button.click()
+
+  # Get URL
+  print("Docs: ", page.url)
+
+  # Closes Tracing
+  context.tracing.stop(path = "trace.zip")
+
+  # Close browser
+  browser.close()
+  ```
 
 ## Locators
 - ``` python
