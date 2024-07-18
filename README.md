@@ -141,6 +141,11 @@ Choosing Between Sync and Async
   browser.close()
   ```
 
+- Open the trace.zip by running terminal command:
+  ```
+  playwright show-trace trace.zip
+  ```
+
 ## Locators
 - ``` python
   # Locates by explicity or implicit accessibility attributes.
