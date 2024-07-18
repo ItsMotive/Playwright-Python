@@ -131,7 +131,7 @@ Choosing Between Sync and Async
   ```
    - ``` python
      # Locates by position of list of webelements
-     .locator("nth=#) 
+     .locator("nth=#") 
      ```
    - ``` python
      # Locates by keyword
@@ -155,11 +155,26 @@ Choosing Between Sync and Async
      ```
  
 ## Mouse Actions
-- .click() : Default left click
-   - .click(button="right") : Right click
-   - .click(modifiers=["Shift", "Alt", "Control", "Meta"]) : Allows for different inputs with clicking
-- .dblclick() : Double left click
-- .hover() : Moves mouse cursor over an element
+- ``` python
+  # Default left click
+  .click() 
+  ```
+   - ``` python
+     # Right click
+     .click(button="right") 
+     ```
+   - ``` python
+     # Allows for different inputs with clicking
+     .click(modifiers=["Shift", "Alt", "Control", "Meta"]) 
+     ```
+- ``` python
+  # Double left click
+  .dblclick() 
+  ```
+- ``` python
+  # Moves mouse cursor over an element
+  .hover() 
+  ```
 
 ## Input Field Actions
 - .fill() : Enters input as if CTRL + C and CTRL + V
