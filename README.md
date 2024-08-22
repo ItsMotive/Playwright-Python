@@ -51,6 +51,10 @@ Choosing Between Sync and Async
    ```
    .\venv\Scripts\activate
    ```
+   - If running into unable to activate environment, run this:
+   ```
+   Set-ExecutionPolicy Unrestricted -Scope Process
+   ```
    
 2. Install Playwright
    ```
